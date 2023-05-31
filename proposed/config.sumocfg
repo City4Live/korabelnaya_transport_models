@@ -5,6 +5,7 @@
     <input>
         <net-file value="proposed.net.xml"/>
         <route-files value="proposed.rou.xml"/>
+        <additional-files value="proposed.add.xml"/>
     </input>
 
     <time>

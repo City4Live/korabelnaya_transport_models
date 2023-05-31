@@ -2,3 +2,5 @@
 __pycache__/
 **/queue-output.xml
 **/tripinfo-output.xml
+
+*.json
