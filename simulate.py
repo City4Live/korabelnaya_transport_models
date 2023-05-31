@@ -1,4 +1,3 @@
-import build_config
 import stats
 import os
 import json
