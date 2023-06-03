@@ -54,13 +54,16 @@ def get_stats(file_inst):
         if f not in flows:
             flows[f] = {
                 'count': 0,
-                'traveltime': [],
-                'waittime': []
+                'trips': []
             }
 
         flows[f]['count'] += 1
-        flows[f]['traveltime'].append(v.traveltime)
-        flows[f]['waittime'].append(v.waittime)
+        flows[f]['trips'].append({
+            'depart': v.depart,
+            'arrival': v.arrival,
+            'traveltime': v.traveltime,
+            'waittime': v.waittime
+        })
 
     return flows
 

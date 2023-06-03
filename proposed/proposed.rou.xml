@@ -10,13 +10,25 @@
     <vType id="mbus" length="7.7" maxSpeed="41.00" vClass="bus" color="green" accel="1.2" decel="2.5" sigma="0.1" />
     <vType id="sbus" length="5.6" maxSpeed="45.00" vClass="bus" color="#BF40BF" accel="1.2" decel="2.5" sigma="0.1" />
     <!-- Routes -->
-    <flow id="flow_0" begin="0.00" from="-93252647#3" to="E3" via="-532233285#8 -367713588 -301445397" end="3600.00" vehsPerHour="600"/>
-    <flow id="flow_01" begin="0.00" from="-93252647#3" to="E3" via="-532233285#8 -367713588 -301445397" end="3600.00" vehsPerHour="10" type="sbus"/>
-    <flow id="flow_02" begin="0.00" from="147537006#0" to="E3" via="-532233285#8 -367713588 -301445397" end="3600.00" vehsPerHour="3" type="bbus"/>
+    <flow id="flow_0" begin="0.00" from="-93252647#3" to="E3" via="-532233285#8 -367713588 -301445397" end="3600.00" vehsPerHour="350"/>
+    <flow id="flow_01" begin="0.00" from="-93252647#3" to="E3" via="-93361519#1 -532233285#5 E1 -406553392 -814880024" end="3600.00" vehsPerHour="10" type="sbus">
+        <stop busStop="bs_7" duration="20"/>
+        <stop busStop="bs_5" duration="20"/>
+        <stop busStop="bs_0" duration="20"/>
+        <stop busStop="bs_1" duration="20"/>
+        <stop busStop="bs_10" duration="20"/>
+    </flow>
+    <flow id="flow_02" begin="0.00" from="147537006#0" to="E3" via="147537006#2 -532233285#5 E1 -406553392 -814880024" end="3600.00" vehsPerHour="3" type="bbus">
+        <stop busStop="bs_6" duration="20"/>
+        <stop busStop="bs_5" duration="20"/>
+        <stop busStop="bs_0" duration="20"/>
+        <stop busStop="bs_1" duration="20"/>
+        <stop busStop="bs_10" duration="20"/>
+    </flow>
 
-    <flow id="flow_1" begin="0.00" from="661676787#0" to="E3" via="292322817#1 24779808#13 -301445397" end="3600.00" vehsPerHour="800"/>
-    <flow id="flow_2" begin="0.00" from="489418505#3" to="E3" via="E8 -301445397" end="3600.00" vehsPerHour="500"/>
-    <flow id="flow_3" begin="0.00" from="821158552#0" to="E3" via="821158553#1 652690782" end="3600.00" vehsPerHour="1000"/>
+    <flow id="flow_1" begin="0.00" from="661676787#0" to="E3" via="292322817#1 24779808#13 -301445397" end="3600.00" vehsPerHour="750"/>
+    <flow id="flow_2" begin="0.00" from="489418505#3" to="E3" via="E8 -301445397" end="3600.00" vehsPerHour="450"/>
+    <flow id="flow_3" begin="0.00" from="821158552#0" to="E3" via="821158553#1 652690782" end="3600.00" vehsPerHour="800"/>
     <flow id="flow_11" begin="0.00" from="661676787#0" to="E3" via="743552285#1 292322817#1 24779808#10 E1 -406553392 -814880024" end="3600.00" vehsPerHour="25" type="bbus">
         <stop busStop="bs_4" duration="20"/>
         <stop busStop="bs_3" duration="20"/>
@@ -59,5 +71,4 @@
         <stop busStop="bs_1" duration="20"/>
         <stop busStop="bs_10" duration="20"/>
     </flow>
-    <!-- 147537006#0 -->
 </routes>

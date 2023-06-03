@@ -4,13 +4,13 @@
 
     <input>
         <net-file value="proposed.net.xml"/>
-        <route-files value="proposed.rou.xml"/>
+        <route-files value="../macro.rou.xml"/>
         <additional-files value="proposed.add.xml"/>
     </input>
 
     <time>
         <begin value="0"/>
-        <end value="3600"/>
+        <end value="7200"/>
     </time>
 
     <!-- <random_number>
@@ -22,7 +22,7 @@
     </gui_only>
 
     <processing>
-        <time-to-teleport value="3600"/>
+        <time-to-teleport value="7200"/>
     </processing>
 
     <output>

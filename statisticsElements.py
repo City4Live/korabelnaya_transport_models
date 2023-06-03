@@ -138,6 +138,8 @@ class VehInformationReader(handler.ContentHandler):
             self._Vehicle.waittime = float(
                 attrs['departDelay']) + float(attrs['waitingTime'])
             self._Vehicle.type = attrs['vType']
+            self._Vehicle.depart = float(attrs['depart'])
+            self._Vehicle.arrival = float(attrs['arrival'])
             self._vehList.append(self._Vehicle)
 
 # output the network statistics based on the sumo-simulation results
