@@ -2,7 +2,7 @@ from locale import DAY_1
 import sys
 import argparse
 import json
-import pandas as pd
+# import pandas as pd
 
 from xml.sax import make_parser
 
@@ -49,6 +49,8 @@ def get_stats(file_inst):
 
     for v in vehicles:
         f = v.label.split('.')[0]
+        if '-' in f:
+            f = f.split('-')[0]
         flow_number = int(f.split('_')[1])
 
         if f not in flows:

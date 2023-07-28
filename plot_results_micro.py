@@ -10,7 +10,7 @@ def plot_results(results, experiments_count):
 
     FLOW_NAMES = ['ул. Брестская', 'ул. Героев Севастополя']
 
-    BAR_WIDTH = 0.5
+    BAR_WIDTH = 0.3
 
     flows_legend = [{}] * FLOW_COUNT
 

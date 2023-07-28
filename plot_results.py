@@ -11,61 +11,69 @@ PT_FLOWS = {
     "pt_1": {
         "flows": ["flow_01"],
         "style": {
-            "label": "pt_1",
             "c": "y",
         }
     },
     "pt_2": {
         "flows": ["flow_02"],
         "style": {
-            "label": "pt_2",
             "c": "y",
         }
     },
     "pt_3": {
         "flows": ["flow_11", "flow_12", "flow_13"],
         "style": {
-            "label": "pt_3",
             "c": "blue",
         }
     },
     "pt_4":{
         "flows": ["flow_31", "flow_32", "flow_33"],
         "style": {
-            "label": "pt_4",
             "c": "green",
         }
     }
 }
 
 COLORS = {
+    "flow_0": "y",
     "flow_1": "blue",
     "flow_2": "orange",
     "flow_3": "green",
-    "flow_4": "red",
-    "flow_5": "purple",
-    "flow_0": "y",
+    # "flow_4": "red",
+    # "flow_5": "purple",
 }
 COLOR_ALPHA = {
+    "current": 0.2,
+    "proposed": 0.35
+}
+PT_ALPHA = {
     "current": 0.35,
     "proposed": 0.5
 }
 LINESTYLES = {
     "current": "dashed",
-    #   {
-    #     "flow_1": ["blue", "dashed"],
-    #     "flow_2": ["orange", "dashed"],
-    #     "flow_3": ["green", "dashed"],
-    #     "flow_4": ["red", "dashed"],
-    #     "flow_5": ["purple", "dashed"],
-    #     "flow_0": ["y", "dashed"]
-    # },
     "proposed": "solid"
 }
 
 MARKERSTYLE = {
     "current": "o",
     "proposed": "x"
+}
+
+LABELS_MAPPING = {
+    "flow_0": "ул. Жидилова",
+    "flow_1": "ул. Горпищенко",
+    "flow_2": "пл. Ластовая",
+    "flow_3": "просп. Победы",
+    "pt_1": "112",
+    "pt_2": "T 1",
+    "pt_3": "T 7,17,4",
+    "pt_4": "T 9,19,20"
+}
+
+MODEL_TYPE_LABEL = {
+    "current": "(сущ.)",
+    "proposed": "(предл.)"
 }
 
 def do_plot(ax, data):
@@ -108,7 +116,7 @@ def plot_results(results, experiments_count):
         for flow_name in CAR_FLOWS:
             processed = process_data(result[flow_name]['trips'])
             style = {
-                'label': "{}_{}".format(model_type, flow_name),
+                'label': "{} {}".format(LABELS_MAPPING[flow_name], MODEL_TYPE_LABEL[model_type]),
                 'c': COLORS[flow_name],
                 'marker': MARKERSTYLE[model_type],
                 'alpha': COLOR_ALPHA[model_type]
@@ -120,9 +128,10 @@ def plot_results(results, experiments_count):
             for flow_name in PT_FLOWS[pt_flow]["flows"]:
                 data += result[flow_name]['trips']
             plots_data2.append(
-                process_data(data) 
-                | PT_FLOWS[pt_flow]['style'] 
-                | { "marker": MARKERSTYLE[model_type], "alpha": COLOR_ALPHA[model_type]})
+                process_data(data)
+                | { "label": "{} {}".format(LABELS_MAPPING[pt_flow], MODEL_TYPE_LABEL[model_type]) }
+                | PT_FLOWS[pt_flow]['style']
+                | { "marker": MARKERSTYLE[model_type], "alpha": PT_ALPHA[model_type] })
 
 
         # polynom = np.poly1d(np.polyfit(range(len(data)), data, deg=10))
@@ -135,7 +144,9 @@ def plot_results(results, experiments_count):
     for plot_data in plots_data2:
         do_plot(ax[1], plot_data)
 
-    plt.legend()
+    for plot in ax:
+        plot.legend()
+
     plt.show()
 
 
