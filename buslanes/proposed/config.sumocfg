@@ -4,7 +4,7 @@
 
     <input>
         <net-file value="proposed.net.xml"/>
-        <route-files value="../macro.rou.xml"/>
+        <route-files value="../common.rou.xml"/>
         <additional-files value="proposed.add.xml"/>
     </input>
 
@@ -18,7 +18,7 @@
     </random_number> -->
 
     <gui_only>
-        <gui-settings-file value="../gui-settings.cfg"/>
+        <gui-settings-file value="../../gui-settings.cfg"/>
     </gui_only>
 
     <processing>
