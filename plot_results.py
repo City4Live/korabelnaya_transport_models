@@ -43,8 +43,8 @@ COLORS = {
     # "flow_5": "purple",
 }
 COLOR_ALPHA = {
-    "current": 0.2,
-    "proposed": 0.35
+    "current": 0.15,
+    "proposed": 0.40
 }
 PT_ALPHA = {
     "current": 0.35,
@@ -84,13 +84,15 @@ def do_plot(ax, data):
         c=data['c'],
         marker=data['marker'],
         alpha=data['alpha'])
+    ax.set_ylabel('Время прохождения участка')
+    ax.set_xlabel('Время отправления')
 
 def process_data(data):
     x = []
     y = []
-    data.sort(key=lambda x: x['arrival'])
+    data.sort(key=lambda x: x['depart'])
     for d in data:
-        x.append(d['arrival'])
+        x.append(d['depart'])
         y.append(d['traveltime'])
     
     return  {

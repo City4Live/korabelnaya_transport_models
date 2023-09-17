@@ -10,15 +10,15 @@ def plot_results(results, experiments_count):
 
     FLOW_NAMES = ['ул. Брестская', 'ул. Героев Севастополя']
 
-    BAR_WIDTH = 0.3
+    BAR_WIDTH = 0.6
 
     flows_legend = [{}] * FLOW_COUNT
 
     fig, ax = plt.subplots()
 
-    bars = range(len(results))
+    bars = [0, 1, 2, 3]
 
-    variant_i = 0
+    variant_i = 1
     for variant_name in results:
         data_by_flows = [[] for i in range(len(results))]
         flows_sum = {}
@@ -42,8 +42,9 @@ def plot_results(results, experiments_count):
                 cumulative_bottom_pos[i] += data_by_flows[flow_number]
         variant_i += 1
 
-    x_labels = ['Существующее положение', 'Предложение']
+    x_labels = ['', 'Существующее\nположение', 'Предложение', '']
     plt.xticks(bars, x_labels)
+    plt.ylabel('Пропускная способность перекрёстка')
     plt.legend(tuple(flows_legend), FLOW_NAMES)
     plt.show()
 
