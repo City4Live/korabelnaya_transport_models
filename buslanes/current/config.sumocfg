@@ -18,7 +18,7 @@
     </random_number> -->
 
     <gui_only>
-        <gui-settings-file value="../../gui-settings.cfg"/>
+        <gui-settings-file value="../gui-settings.cfg"/>
     </gui_only>
 
     <processing>
