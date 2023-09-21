@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2023-09-17 12:40:16 by Eclipse SUMO netedit Version 1.18.0
+<!-- generated on 2023-09-21 11:42:49 by Eclipse SUMO netedit Version 1.18.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
 
     <input>
-        <sumo-net-file value="/home/nikitak/cloud/yandex/Documents/City/Проекты/Дороги/корабельная_сторона/transport_models/proposed/proposed.net.xml"/>
+        <sumo-net-file value="/home/nikitak/Work/City4Live/sevdortrans/transport_models/buslanes/proposed/proposed.net.xml"/>
     </input>
 
     <output>
-        <output-file value="/home/nikitak/cloud/yandex/Documents/City/Проекты/Дороги/корабельная_сторона/transport_models/proposed/proposed.net.xml"/>
+        <output-file value="/home/nikitak/Work/City4Live/sevdortrans/transport_models/buslanes/proposed/proposed.net.xml"/>
     </output>
 
     <processing>
@@ -4788,7 +4788,7 @@
         <lane id=":2641770334_2_0" index="0" allow="pedestrian delivery bicycle" speed="9.72" length="0.10" shape="1751.20,2074.78 1751.20,2074.76"/>
     </edge>
     <edge id=":2641794281_0" function="internal">
-        <lane id=":2641794281_0_0" index="0" allow="bus" speed="16.67" length="0.30" shape="1927.36,1697.48 1927.13,1697.68"/>
+        <lane id=":2641794281_0_0" index="0" speed="16.67" length="0.30" shape="1927.36,1697.48 1927.13,1697.68"/>
         <lane id=":2641794281_0_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="16.67" length="0.30" shape="1925.26,1695.06 1925.05,1695.25"/>
     </edge>
     <edge id=":2641796665_0" function="internal">
@@ -5251,7 +5251,7 @@
         <lane id=":3179504098_0_0" index="0" allow="pedestrian delivery bicycle" speed="3.65" length="4.67" shape="2283.53,1130.64 2283.18,1132.04 2282.56,1132.69 2281.67,1132.58 2280.51,1131.72"/>
     </edge>
     <edge id=":3179519249_0" function="internal">
-        <lane id=":3179519249_0_0" index="0" allow="bus" speed="16.67" length="0.29" shape="1809.11,1798.70 1808.87,1798.90"/>
+        <lane id=":3179519249_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="16.67" length="0.29" shape="1809.11,1798.70 1808.87,1798.90"/>
         <lane id=":3179519249_0_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="16.67" length="0.29" shape="1807.03,1796.27 1806.82,1796.45"/>
     </edge>
     <edge id=":3214535894_0" function="internal">
@@ -10544,7 +10544,7 @@
         <lane id=":8922071057_0_0" index="0" allow="pedestrian delivery bicycle" speed="3.65" length="4.67" shape="209.35,2133.38 210.25,2134.50 210.39,2135.39 209.77,2136.03 208.38,2136.42"/>
     </edge>
     <edge id=":8926544204_0" function="internal">
-        <lane id=":8926544204_0_0" index="0" allow="bus" speed="16.67" length="0.10" shape="2010.48,1625.41 2010.48,1625.41"/>
+        <lane id=":8926544204_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="16.67" length="0.10" shape="2010.48,1625.41 2010.48,1625.41"/>
         <lane id=":8926544204_0_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="16.67" length="0.10" shape="2008.38,1622.99 2008.38,1622.99"/>
     </edge>
     <edge id=":8927003410_0" function="internal">
@@ -16861,11 +16861,11 @@
         <lane id="24779808#10_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="16.67" length="38.96" shape="2037.61,1597.25 2020.23,1612.72 2008.38,1622.99"/>
     </edge>
     <edge id="24779808#11" from="8926544204" to="2641794281" priority="10" type="highway.tertiary" spreadType="center">
-        <lane id="24779808#11_0" index="0" allow="bus" speed="16.67" length="110.01" shape="2010.48,1625.41 1927.36,1697.48"/>
+        <lane id="24779808#11_0" index="0" speed="16.67" length="110.01" shape="2010.48,1625.41 1927.36,1697.48"/>
         <lane id="24779808#11_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="16.67" length="110.01" shape="2008.38,1622.99 1925.26,1695.06"/>
     </edge>
     <edge id="24779808#12" from="2641794281" to="3179519249" priority="10" type="highway.tertiary" spreadType="center" shape="1926.20,1696.37 1843.72,1766.97 1807.96,1797.58">
-        <lane id="24779808#12_0" index="0" allow="bus" speed="16.67" length="155.35" shape="1927.13,1697.68 1844.76,1768.19 1809.11,1798.70"/>
+        <lane id="24779808#12_0" index="0" speed="16.67" length="155.35" shape="1927.13,1697.68 1844.76,1768.19 1809.11,1798.70"/>
         <lane id="24779808#12_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="16.67" length="155.35" shape="1925.05,1695.25 1842.68,1765.75 1807.03,1796.27"/>
     </edge>
     <edge id="24779808#13" from="3179519249" to="265663217" priority="10" type="highway.tertiary" spreadType="center">

@@ -69,6 +69,6 @@ def plot_results(results, experiments_count):
 
     x_labels = ['', 'Существующее\nположение', 'Предложение', '']
     plt.xticks(bars, x_labels)
-    plt.ylabel('Пропускная способность перекрёстка')
+    plt.ylabel('Пропускная способность перекрестка, авт./час')
     plt.legend(tuple(flows_legend), FLOW_NAMES)
     plt.show()
