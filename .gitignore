@@ -1,4 +1,5 @@
 .venv/
+.docker-venv/
 __pycache__/
 **/queue-output.xml
 **/tripinfo-output.xml
